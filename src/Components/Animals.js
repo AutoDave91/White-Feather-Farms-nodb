@@ -1,10 +1,18 @@
 import React from 'react';
+// import AnimalProfile from './AnimalProfile'
+import './Animals.css';
 
 function Animals() {
   return (
-    <div className="App">
-        <p>Animals</p>
-    </div>
+    <main className="animalsContainer">
+        <header>
+            <img src='' alt='logo'/>
+            <h1>Animals</h1>
+        </header>
+        <section>
+            {/* <AnimalProfile/> */}
+        </section>
+    </main>
   );
 }
 
