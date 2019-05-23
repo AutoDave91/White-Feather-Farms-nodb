@@ -16,7 +16,7 @@ class Home extends Component {
         return (
             <main className="homeContainer">
                 <header>
-                    <img src="/Pics/IMG_2155(1).jpg" alt='full White Feather Farms logo'/>
+                    <img src="" alt='full White Feather Farms logo'/>
                 </header>
                 <section>
                     <p>Pics</p>
