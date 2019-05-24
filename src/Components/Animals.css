@@ -10,4 +10,6 @@
 }
 .animal{
     background: whitesmoke; 
+    display: flex;
+    flex-wrap: wrap;
 }
