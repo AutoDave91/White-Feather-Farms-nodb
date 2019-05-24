@@ -5,11 +5,12 @@ function Events() {
   return (
     <main className="eventsContainer">
       <header className='Header'>
-        <img src='' alt='logo'/>
+        <img className='logo' src={require('./Pics/logo.jpg')} width='10px' height='10px' alt='logo'/>
         <h1>Events</h1>
       </header>
         <section>
             <p>Event Slides</p>
+            <img />
         </section>
         <section className='Social'>
             <button>Facebook</button>

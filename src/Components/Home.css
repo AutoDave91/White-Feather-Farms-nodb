@@ -7,6 +7,10 @@
     height: 100vh;
     width: 100vw;
 }
-img{
+.slides{
     height: 50vh;
+}
+.logo{
+    height: 25vh;
+    width: 40vw;
 }

@@ -1,9 +1,10 @@
 .familyContainer{
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     background-color: bisque;
     height: 100vh;
     width: 100vw;
+    padding-top: 5vh;
 }

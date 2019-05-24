@@ -9,18 +9,18 @@ class Home extends Component {
             index: 0
         }
     }
-
-
+    
     render(){
+        console.log(this.state.index)
         let pics = homePics;
         return (
             <main className="homeContainer">
                 <header>
-                    <img src="" alt='full White Feather Farms logo'/>
+                    <img className='logo' src={require('./Pics/main-logo.jpg')} width='10px' height='10px' alt='full White Feather Farms logo'/>
                 </header>
                 <section>
                     <p>Pics</p>
-                    <img src={pics[this.state.index]} />
+                    <img className='slides' src={pics[this.state.index]} />
                      <button onClick={()=> {if(this.state.index >0){
                         this.setState({index: this.state.index -1})
                     }}}><strong><i className="prev"></i>Previous</strong></button>
