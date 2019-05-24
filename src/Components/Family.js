@@ -17,11 +17,16 @@ class Family extends Component {
               <h1>Family</h1>
             </header>
             <section>
-                {/* <FamilyProfile/> */}
-                <button onClick={()=> {if(this.state.index >0){
-                        this.setState({index: this.state.index -1})
+                {/* {animals.map((animal, index)=>(
+                        index === this.state.index ? <AnimalProfile key={index} animal={animal} updateAnimals={this.updateAnimals} /> : null
+                        ))}
+                    {animals.map((animal, index)=>(
+                        index === this.state.index+1 ? <AnimalProfile key={index} animal={animal} updateAnimals={this.updateAnimals} /> : null
+                        ))} */}
+                <button onClick={()=> {if(this.state.index >=2){
+                        this.setState({index: this.state.index -2})
                     }}}><strong><i className="prev"></i>Previous</strong></button>
-                <button onClick={()=>{ this.setState({index: this.state.index +1})}}>
+                <button onClick={()=>{ this.setState({index: this.state.index +2})}}>
                     <strong>Next<i className="next"></i></strong></button>
             </section>
           </main>
