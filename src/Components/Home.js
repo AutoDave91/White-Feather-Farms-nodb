@@ -34,4 +34,4 @@ class Home extends Component {
 
 export default Home;
 
-// 57pts as of 12:40PM May 24th
+// 73pts as of 4:07PM May 24th
