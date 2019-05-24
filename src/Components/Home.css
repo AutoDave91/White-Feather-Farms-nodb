@@ -3,14 +3,14 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    background: aqua;
+    background-image:url('./Pics/eggs.jpg');
     height: 100vh;
     width: 100vw;
 }
 .slides{
     height: 50vh;
 }
-.logo{
+.main-logo{
     height: 25vh;
     width: 40vw;
 }

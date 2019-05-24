@@ -16,7 +16,7 @@ class Home extends Component {
         return (
             <main className="homeContainer">
                 <header>
-                    <img className='logo' src={require('./Pics/main-logo.jpg')} width='10px' height='10px' alt='full White Feather Farms logo'/>
+                    <img className='main-logo' src={require('./Pics/main-logo.jpg')} width='10px' height='10px' alt='full White Feather Farms logo'/>
                 </header>
                 <section>
                     <p>Pics</p>

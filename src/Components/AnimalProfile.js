@@ -3,7 +3,7 @@ import axios from "axios";
 
 function AnimalProfile(props) {
   return (
-    <main className="Animal">
+    <main className="animal">
       <img className='logo' src={props.animal.image} alt={props.animal.species} />
       <section style={{ display: "flex", flexDirection: "column" }}>
         <h3>{props.animal.species}</h3>
