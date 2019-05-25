@@ -12,3 +12,11 @@ const picSlides = [
         image: ''
     }
 ]
+
+const getHome = (req, res)=>{
+    res.json(picSlides);
+}
+
+module.exports ={
+    getHome
+}

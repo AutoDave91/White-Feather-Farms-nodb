@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import AnimalProfile from './AnimalProfile'
+import AnimalProfile from './AnimalProfile';
+import Add from './Add';
 import './Animals.css';
 
 class Animals extends Component {
@@ -11,9 +12,11 @@ class Animals extends Component {
             loading: true,
             index:0,
             error: '',
-            userSearch: ''
+            userSearch: '',
+            view: 'main'
         }
         this.updateAnimals = this.updateAnimals.bind(this);
+        this.changeView = this.changeView.bind(this)
     }
 
     componentDidMount(){
@@ -53,6 +56,16 @@ class Animals extends Component {
         axios.get(`/api/animals/${this.state.userSearch}`)
             .then(res => this.setState({animals: res.data }))
     }
+    changeView(newView){
+        this.setState({view: newView})
+    }
+    // newAnimal(){
+    //     let newAnimal = prompt("Who's the addition?");
+
+    //     if(newAnimal != null){
+
+    //     }
+    // }
 
     render(){
         console.log(this.state.animals)
@@ -68,6 +81,8 @@ class Animals extends Component {
                     <button onClick={() => this.pastureAnimals()}>Pasture</button>
                     <button onClick={() => this.allAnimals()}>All</button>
                     <button onClick={() => this.yardAnimals()}>Yard</button>
+                    <button className={this.state.view === "add" ? "current" : ""}
+                        onClick={() => this.setState({ view: "add" })}>New Animal</button>
                 </section>
                 <section className='animals'>
                     {animals.map((animal, index)=>(
@@ -91,7 +106,8 @@ class Animals extends Component {
                             <input type='field' placeholder='search species' onChange={(e) => this.handleChange(e.target.value)} />
                             <button onClick={()=> {this.searchAnimals(this.state.userSearch)}}>Search</button>
                         </section>
-                        <button onClick={()=>{ this.setState({index: this.state.index +4})}}>
+                        <button onClick={()=>{ if(this.state.index < animals.length-4){
+                            this.setState({index: this.state.index +4})}}}>
                         <strong>Next<i className="next"></i></strong></button>
                     </section>
             </main>

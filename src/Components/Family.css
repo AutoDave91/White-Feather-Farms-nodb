@@ -12,3 +12,16 @@
     height: 15vh;
     width: 12vw;
 }
+.family{
+    background: whitesmoke; 
+    display: flex;
+    flex-wrap: wrap;
+    width: 30vw;
+    margin-right: 2vw;
+    margin-bottom: 5vh;
+}
+.profiles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

@@ -3,9 +3,6 @@ import axios from "axios";
 
 function AnimalProfile(props) {
     console.log("props", props)
-    // if(!props.animal){
-    //     return null;
-    // }
   return (
     <main className="animal">
       <img className='logo' src={props.animal.image} alt={props.animal.species} />

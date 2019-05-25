@@ -37,8 +37,8 @@ const animals = [
     },
     {
         image: "https://cdn.pixabay.com/photo/2017/08/17/23/21/donkey-2653298_960_720.jpg",
-        location: 'Pasture',
-        species: 'Miniature Donkey2',
+        location: 'Yard',
+        species: 'Pig',
         breed: '',
         age_range: '',
         names: '',
@@ -46,17 +46,17 @@ const animals = [
     },
     {
         image: "https://cdn.pixabay.com/photo/2017/10/28/06/48/cow-2896329_960_720.jpg",
-        location: 'Pasture',
-        species: 'Miniature Cow2',
-        breed: 'Zebu',
+        location: 'Yard',
+        species: 'Goat',
+        breed: '',
         age_range: '',
         names: '',
         fun: 'c-mon man!!'
     },
     {
         image: "https://images.pexels.com/photos/70369/donkey-fence-nature-outside-70369.jpeg?cs=srgb&dl=animal-close-up-donkey-70369.jpg&fm=jpg",
-        location: 'Pasture',
-        species: 'Donkey2',
+        location: 'Yard',
+        species: 'Chicken',
         breed: 'red',
         age_range: 'white',
         names: 'blue',
@@ -65,7 +65,25 @@ const animals = [
     {
         image: "https://live.staticflickr.com/1933/44541002854_ae4d7cd797_b.jpg",
         location: 'yard',
-        species: 'Duck2',
+        species: 'Chicken',
+        breed: 'donno',
+        age_range: 'white',
+        names: 'blue',
+        fun: 'c-mon man!!'
+    },
+    {
+        image: "https://images.pexels.com/photos/70369/donkey-fence-nature-outside-70369.jpeg?cs=srgb&dl=animal-close-up-donkey-70369.jpg&fm=jpg",
+        location: 'Yard',
+        species: 'Chicken',
+        breed: 'red',
+        age_range: 'white',
+        names: 'blue',
+        fun: 'c-mon man!!'
+    },
+    {
+        image: "https://live.staticflickr.com/1933/44541002854_ae4d7cd797_b.jpg",
+        location: 'yard',
+        species: 'Chicken',
         breed: 'donno',
         age_range: 'white',
         names: 'blue',
