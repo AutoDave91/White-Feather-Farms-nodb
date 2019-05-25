@@ -8,7 +8,9 @@ class Family extends Component {
         super();
         this.state = {
             family: [],
-            index:0
+            index:0,
+            loading: false,
+            error: ''
         }
     }
 

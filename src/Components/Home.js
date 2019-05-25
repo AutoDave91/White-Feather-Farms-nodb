@@ -1,37 +1,58 @@
 import React, {Component} from 'react';
+import axios from 'axios';
+import HomeSlides from './HomeSlides';
 import './Home.css';
-import homePics from './homePics';
 
 class Home extends Component {
+    
     constructor(){
         super();
         this.state = {
-            index: 0
+            picSlides: [],
+            index:0,
+            loading: false,
+            error: ''
         }
     }
     
+    componentDidMount(){
+        axios
+            .get('/api/home')
+            .then(response =>{
+                this.setState({picSlides: response.data, loading: false});
+            })
+            .catch(error =>{
+                console.log(error);
+                this.setState({loading: false, error: 'An error occurred'})
+            })
+    }
+    updateHome(newHome){
+        this.setState({picSlides: newHome});
+    }
+
     render(){
-        console.log(this.state.index)
-        let pics = homePics;
+        const {picSlides} = this.state
         return (
-            <main className="homeContainer">
-                <header>
-                    <img className='main-logo' src={require('./Pics/main-logo.jpg')} width='10px' height='10px' alt='full White Feather Farms logo'/>
-                </header>
-                <section>
-                    <p>Pics</p>
-                    <img className='slides' src={pics[this.state.index]} />
-                     <button onClick={()=> {if(this.state.index >0){
-                        this.setState({index: this.state.index -1})
-                    }}}><strong><i className="prev"></i>Previous</strong></button>
-                    <button onClick={()=>{ this.setState({index: this.state.index +1})}}>
-                    <strong>Next<i className="next"></i></strong></button>
-                </section>
-            </main>
+            <main className="homeContainer" id='home'>
+            <header>
+                <img className='main-logo' src={require('./Pics/main-logo.jpg')} width='10px' height='10px' alt='logo'/>
+            </header>
+            <section className='slides'>
+                {picSlides.map((picSlides, index)=>(
+                    index === this.state.index ? <HomeSlides key={index} picSlides={picSlides} updateHome={this.updateHome} /> : null
+                    ))}
+                    <button onClick={()=> {if(this.state.index >0){
+                    this.setState({index: this.state.index -1})
+                }}}><strong><i className="prev"></i>Previous</strong></button>
+                <button onClick={()=>{if(this.state.index < this.state.picSlides.length -1){
+                    this.setState({index: this.state.index +1})}}}>
+                <strong>Next<i className="next"></i></strong></button>
+            </section>
+        </main>
         );
     }
 }
 
 export default Home;
 
-// 73pts as of 4:07PM May 24th
+// 84pts as of 2:40PM May 25th

@@ -34,6 +34,7 @@ class Animals extends Component {
         this.setState({animals: newAnimals});
     }
     allAnimals(){
+        this.setState({index: 0})
         axios.get('/api/animals')
             .then(res => this.setState({animals: res.data}))
             .catch(error =>{
@@ -42,10 +43,12 @@ class Animals extends Component {
             })
     }
     pastureAnimals() {
+        this.setState({index: 0})
         axios.get('/api/animals/filter?location=Pasture')
           .then(res => this.setState({ animals: res.data }))
     }
     yardAnimals() {
+        this.setState({index: 0})
         axios.get('/api/animals/filter?location=yard')
             .then(res => this.setState({ animals: res.data }))
     }
@@ -53,6 +56,7 @@ class Animals extends Component {
         this.setState({userSearch: text});
     }
     searchAnimals(){
+        this.setState({index: 0})
         axios.get(`/api/animals/${this.state.userSearch}`)
             .then(res => this.setState({animals: res.data }))
     }
