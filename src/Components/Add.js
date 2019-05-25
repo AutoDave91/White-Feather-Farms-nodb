@@ -6,12 +6,8 @@ class Add extends Component {
     super(props);
     this.state = {
       image: '',
-      location: '',
-      species: '',
-      breed: '',
-      age_range: '',
-      names: '',
-      fun: ''
+      title: '',
+      details: ''
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -30,17 +26,14 @@ class Add extends Component {
         onSubmit={e => {
           e.preventDefault();
           axios
-            .post("/api/animals", {
+            .post("/api/events", {
               image: this.state.image,
-              location: this.state.location,
-              species: this.state.species,
-              breed: this.state.breed,
-              age_range: this.state.age_range,
-              names: this.state.names,
-              fun: this.state.fun
+              title: this.state.title,
+              details: this.state.details
             })
+            // .get('/api/events')
             .then(response => {
-              this.props.changeView("wishes");
+              this.props.changeView("events");
             })
             .catch(error => {
               console.log(error);
@@ -48,12 +41,8 @@ class Add extends Component {
         }}
       >
         <input name="image" onChange={this.handleChange} placeholder="Image" />
-        <input name="location" onChange={this.handleChange} placeholder="location" />
-        <input name="species" onChange={this.handleChange} placeholder="species" />
-        <input name="breed" onChange={this.handleChange} placeholder="breed" />
-        <input name="age_range" onChange={this.handleChange} placeholder="age_range" />
-        <input name="names" onChange={this.handleChange} placeholder="Names" />
-        <input name="fun" onChange={this.handleChange} placeholder="fun fact" />
+        <input name="title" onChange={this.handleChange} placeholder="title" />
+        <input name="details" onChange={this.handleChange} placeholder="details" />
         <button type="reset">Cancel</button>
         <button type="submit">Submit</button>
       </form>

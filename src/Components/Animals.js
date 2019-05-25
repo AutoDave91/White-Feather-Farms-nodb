@@ -85,8 +85,8 @@ class Animals extends Component {
                     <button onClick={() => this.pastureAnimals()}>Pasture</button>
                     <button onClick={() => this.allAnimals()}>All</button>
                     <button onClick={() => this.yardAnimals()}>Yard</button>
-                    <button className={this.state.view === "add" ? "current" : ""}
-                        onClick={() => this.setState({ view: "add" })}>New Animal</button>
+                    {/* <button className={this.state.view === "add" ? "current" : ""}
+                        onClick={() => this.setState({ view: "add" })}>New Animal</button> */}
                 </section>
                 <section className='animals'>
                     {animals.map((animal, index)=>(

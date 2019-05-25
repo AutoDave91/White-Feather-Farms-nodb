@@ -16,14 +16,14 @@ app.get('/api/animals/filter', animalController.filterAnimal)
 app.get('/api/animals/:species', animalController.searchAnimals)
 
 // app.post('/api/animals')
-// app.post('/api/events')
+app.post('/api/events', eventsController.addEvent);
 
 // app.put('/api/animals/:')
 // app.put('/api/family/:')
-// app.put('/api/events/:')
+app.put('/api/events/:', eventsController.editEvent)
 
 // app.delete('/api/animals')
-// app.delete('/api/events')
+app.delete('/api/events/:title', eventsController.deleteEvent)
 
 
 
