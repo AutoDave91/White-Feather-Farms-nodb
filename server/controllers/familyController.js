@@ -3,8 +3,8 @@ const family = [
         image: '',
         name: 'David L Newman',
         job: 'Operations Manager',
-        fav_animal: '',
-        fav_activity: '',
+        fav_animal: 'Maverick the mini-donkey',
+        fav_activity: 'mowing the field',
         children: ['David W Newman',', ', 'Megan Beattie']
     },
     {
@@ -34,7 +34,7 @@ const family = [
     {
         image: '',
         name: 'Alex Beattie',
-        job: ['Grapevine Fire Fighter', 'USAF reservist'],
+        job: ['Fire Fighter', ', ', 'USAF reservist'],
         fav_animal: 'the cows',
         fav_activity: 'shooting',
         children: ['Michael Beattie',', ', 'Kathryn Beattie']

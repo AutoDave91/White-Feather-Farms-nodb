@@ -1,7 +1,6 @@
 .animalsContainer{
     display: flex;
     flex-flow: column;
-    /* justify-content: center; */
     align-items: center;
     background-image:url('./Pics/egg-cross.jpg');
     height: 100vh;
@@ -20,4 +19,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2vh;
+    color: white;
+}
+.animal-buttons1, .animal-buttons2{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2vh;
 }

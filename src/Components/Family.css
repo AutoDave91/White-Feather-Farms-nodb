@@ -19,6 +19,7 @@
     width: 30vw;
     margin-right: 2vw;
     margin-bottom: 5vh;
+    justify-content: center;
 }
 .profiles{
     display: flex;

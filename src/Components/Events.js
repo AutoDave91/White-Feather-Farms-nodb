@@ -52,7 +52,8 @@ class Events extends Component {
                     this.setState({index: this.state.index -1})
                 }}}><strong><i className="prev"></i>Previous</strong></button>
                 <button className={this.state.view === 'add' ? 'current' : ''} onClick={()=> this.setState({view: 'add'})}>Add</button>
-                <button onClick={()=>{if(this.state.index < this.state.eventSlides.length -1){
+                <button onClick={()=>{
+                    if(this.state.index < this.state.eventSlides.length -1){
                     this.setState({index: this.state.index +1})}}}>
                 <strong>Next<i className="next"></i></strong></button>
             </section>

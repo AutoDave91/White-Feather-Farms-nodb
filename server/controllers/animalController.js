@@ -3,9 +3,9 @@ const animals = [
         image: "https://cdn.pixabay.com/photo/2017/08/17/23/21/donkey-2653298_960_720.jpg",
         location: 'Pasture',
         species: 'Miniature Donkey',
-        breed: '1',
-        age_range: '2',
-        names: '3, 4, 5',
+        breed: '',
+        age_range: '4-7y',
+        names: 'Maverick, Daisy, and Camden',
         fun: 'c-mon man!!'
     },
     {
@@ -13,43 +13,70 @@ const animals = [
         location: 'Pasture',
         species: 'Miniature Cow',
         breed: 'Zebu',
-        age_range: '',
-        names: '',
+        age_range: '2m - 3y',
+        names: 'Milly, Sarah, Ruth, Liza, Alice, Erin, and Noel',
         fun: 'c-mon man!!'
     },
     {
         image: "https://images.pexels.com/photos/70369/donkey-fence-nature-outside-70369.jpeg?cs=srgb&dl=animal-close-up-donkey-70369.jpg&fm=jpg",
         location: 'Pasture',
         species: 'Donkey',
-        breed: 'red',
-        age_range: 'white',
-        names: 'blue',
+        breed: '',
+        age_range: '6y',
+        names: 'Josey and Stormy',
         fun: 'c-mon man!!'
     },
     {
         image: "https://live.staticflickr.com/1933/44541002854_ae4d7cd797_b.jpg",
         location: 'yard',
         species: 'Duck',
-        breed: 'donno',
-        age_range: 'white',
-        names: 'blue',
+        breed: 'Khaki Campbell',
+        age_range: '3y',
+        names: '',
         fun: 'c-mon man!!'
     },
     {
         image: "https://cdn.pixabay.com/photo/2017/08/17/23/21/donkey-2653298_960_720.jpg",
         location: 'Yard',
         species: 'Pig',
-        breed: '',
-        age_range: '',
-        names: '',
+        breed: 'American Miniature',
+        age_range: '1-3y',
+        names: 'Sammy, Simon, and Precious',
+        fun: 'c-mon man!!'
+    },
+    {
+        image: "https://cdn.pixabay.com/photo/2017/08/17/23/21/donkey-2653298_960_720.jpg",
+        location: 'Yard',
+        species: 'Pig',
+        breed: 'Pot-bellied',
+        age_range: '2w-3y',
+        names: 'Peri, Pumpkin, Penny, and Little Dude',
         fun: 'c-mon man!!'
     },
     {
         image: "https://cdn.pixabay.com/photo/2017/10/28/06/48/cow-2896329_960_720.jpg",
         location: 'Yard',
         species: 'Goat',
-        breed: '',
-        age_range: '',
+        breed: 'Dwarf Nigerian',
+        age_range: '1-2y',
+        names: 'Toby, Penelope, Daphne, Oreo, Thumper, ans Caesar',
+        fun: 'c-mon man!!'
+    },
+    {
+        image: "https://images.pexels.com/photos/70369/donkey-fence-nature-outside-70369.jpeg?cs=srgb&dl=animal-close-up-donkey-70369.jpg&fm=jpg",
+        location: 'Yard',
+        species: 'Chicken',
+        breed: 'Black Australorp',
+        age_range: '3y',
+        names: '',
+        fun: 'c-mon man!!'
+    },
+    {
+        image: "https://live.staticflickr.com/1933/44541002854_ae4d7cd797_b.jpg",
+        location: 'yard',
+        species: 'Chicken',
+        breed: 'Barred Rock',
+        age_range: '3y',
         names: '',
         fun: 'c-mon man!!'
     },
@@ -57,36 +84,9 @@ const animals = [
         image: "https://images.pexels.com/photos/70369/donkey-fence-nature-outside-70369.jpeg?cs=srgb&dl=animal-close-up-donkey-70369.jpg&fm=jpg",
         location: 'Yard',
         species: 'Chicken',
-        breed: 'red',
-        age_range: 'white',
-        names: 'blue',
-        fun: 'c-mon man!!'
-    },
-    {
-        image: "https://live.staticflickr.com/1933/44541002854_ae4d7cd797_b.jpg",
-        location: 'yard',
-        species: 'Chicken',
-        breed: 'donno',
-        age_range: 'white',
-        names: 'blue',
-        fun: 'c-mon man!!'
-    },
-    {
-        image: "https://images.pexels.com/photos/70369/donkey-fence-nature-outside-70369.jpeg?cs=srgb&dl=animal-close-up-donkey-70369.jpg&fm=jpg",
-        location: 'Yard',
-        species: 'Chicken',
-        breed: 'red',
-        age_range: 'white',
-        names: 'blue',
-        fun: 'c-mon man!!'
-    },
-    {
-        image: "https://live.staticflickr.com/1933/44541002854_ae4d7cd797_b.jpg",
-        location: 'yard',
-        species: 'Chicken',
-        breed: 'donno',
-        age_range: 'white',
-        names: 'blue',
+        breed: 'Pearl White Leghorn',
+        age_range: '3y',
+        names: '',
         fun: 'c-mon man!!'
     }
 ]
