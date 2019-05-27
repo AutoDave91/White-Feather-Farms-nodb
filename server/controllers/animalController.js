@@ -1,6 +1,6 @@
 const animals = [
     {
-        image: "https://cdn.pixabay.com/photo/2017/08/17/23/21/donkey-2653298_960_720.jpg",
+        image: "{require(./Pics/miniDonkey.jpg)}",
         location: 'Pasture',
         species: 'Miniature Donkey',
         breed: '',
@@ -9,7 +9,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "https://cdn.pixabay.com/photo/2017/10/28/06/48/cow-2896329_960_720.jpg",
+        image: "./Pics/cows.jpg",
         location: 'Pasture',
         species: 'Miniature Cow',
         breed: 'Zebu',
@@ -18,7 +18,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "https://images.pexels.com/photos/70369/donkey-fence-nature-outside-70369.jpeg?cs=srgb&dl=animal-close-up-donkey-70369.jpg&fm=jpg",
+        image: "{require(./Pics/fullDonkey.jpg)}",
         location: 'Pasture',
         species: 'Donkey',
         breed: '',
@@ -27,7 +27,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "https://live.staticflickr.com/1933/44541002854_ae4d7cd797_b.jpg",
+        image: "{require(./Pics/duck2.jpg)}",
         location: 'yard',
         species: 'Duck',
         breed: 'Khaki Campbell',
@@ -36,7 +36,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "https://cdn.pixabay.com/photo/2017/08/17/23/21/donkey-2653298_960_720.jpg",
+        image: "{require(./Pics/miniPig.jpg)}",
         location: 'Yard',
         species: 'Pig',
         breed: 'American Miniature',
@@ -45,7 +45,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "https://cdn.pixabay.com/photo/2017/08/17/23/21/donkey-2653298_960_720.jpg",
+        image: "{require(./Pics/PotPigs.jpg)}",
         location: 'Yard',
         species: 'Pig',
         breed: 'Pot-bellied',
@@ -54,7 +54,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "https://cdn.pixabay.com/photo/2017/10/28/06/48/cow-2896329_960_720.jpg",
+        image: "{require(./Pics/goats2.jpg)}",
         location: 'Yard',
         species: 'Goat',
         breed: 'Dwarf Nigerian',
@@ -63,7 +63,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "https://images.pexels.com/photos/70369/donkey-fence-nature-outside-70369.jpeg?cs=srgb&dl=animal-close-up-donkey-70369.jpg&fm=jpg",
+        image: "{require(./Pics/blackChicken.jpg)}",
         location: 'Yard',
         species: 'Chicken',
         breed: 'Black Australorp',
@@ -72,7 +72,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "https://live.staticflickr.com/1933/44541002854_ae4d7cd797_b.jpg",
+        image: "{require(./Pics/barChicken.jpg)}",
         location: 'yard',
         species: 'Chicken',
         breed: 'Barred Rock',
@@ -81,7 +81,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "https://images.pexels.com/photos/70369/donkey-fence-nature-outside-70369.jpeg?cs=srgb&dl=animal-close-up-donkey-70369.jpg&fm=jpg",
+        image: "{require(./Pics/whiteChicken.jpg)}",
         location: 'Yard',
         species: 'Chicken',
         breed: 'Pearl White Leghorn',

@@ -11,6 +11,7 @@
     background: whitesmoke; 
     display: flex;
     flex-wrap: wrap;
+    height: 30vh;
     width: 30vw;
     margin-right: 5vw;
     margin-bottom: 5vh;

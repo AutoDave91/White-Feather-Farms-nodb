@@ -1,6 +1,6 @@
 const family = [
     {
-        image: '',
+        image: './Pics/davidLN.jpg',
         name: 'David L Newman',
         job: 'Operations Manager',
         fav_animal: 'Maverick the mini-donkey',
@@ -16,7 +16,7 @@ const family = [
         children: ['David W Newman',', ', 'Megan Beattie']
     },
     {
-        image: '',
+        image: "../pics/aprilDavidRylie.jpg",
         name: 'David W Newman',
         job: '',
         fav_animal: 'the pigs',
@@ -24,7 +24,7 @@ const family = [
         children: ['Rylie Newman']
     },
     {
-        image: '',
+        image: "{require('../pics/aprilDavidRylie.jpg')}",
         name: 'April Newman',
         job: 'NICU/PICU Respiratory Therapist',
         fav_animal: 'the goats',
@@ -40,7 +40,7 @@ const family = [
         children: ['Michael Beattie',', ', 'Kathryn Beattie']
     },
     {
-        image: '',
+        image: 'https://media.licdn.com/dms/image/C4E03AQH0KxqHYKSqEg/profile-displayphoto-shrink_800_800/0?e=1564617600&v=beta&t=JMB9LOKEon5QpOYpJLJpdMCuQUllJppbfupgqo_HNXU',
         name: 'Megan Beattie',
         job: 'Personal Trainer',
         fav_animal: 'the goats',

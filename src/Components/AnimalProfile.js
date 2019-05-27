@@ -11,7 +11,6 @@ function AnimalProfile(props) {
         <h3>Age Range: {props.animal.age_range}</h3>
         <h3>Names: {props.animal.names}</h3>
         <h3>Fun Fact : {props.animal.fun}</h3>
-        <button>Edit</button>
       </section>
     </main>
   );
