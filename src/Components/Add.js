@@ -31,9 +31,8 @@ class Add extends Component {
               title: this.state.title,
               details: this.state.details
             })
-            .then(response => {
-              this.props.changeView("events");
-            })
+            .then(response =>{
+              this.props.updateEvent(response.data)})
             .catch(error => {
               console.log(error);
             })

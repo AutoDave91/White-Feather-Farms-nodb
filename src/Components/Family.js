@@ -35,7 +35,7 @@ class Family extends Component {
           <main className="familyContainer" id='Family'>
             <header>
               <img className='logo' src={require('./Pics/logo.jpg')} width='10px' height='10px' alt='logo'/>
-              <h1>Family</h1>
+              <h1 id='family'>Family</h1>
             </header>
             <section className='profiles'>
                 {family.map((family, index)=>(

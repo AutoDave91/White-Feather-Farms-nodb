@@ -47,7 +47,7 @@ class Events extends Component {
         <main className="eventsContainer">
             <header className='Header'>
                 <img className='logo' src={require('./Pics/logo.jpg')} width='10px' height='10px' alt='logo'/>
-                <h1>Events</h1>
+                <h1 className='events'>Events</h1>
             </header>
             <section className='slides'>
                 {eventSlides.map((eventSlides, index)=>(
@@ -61,15 +61,15 @@ class Events extends Component {
                 <div className='addEditDelete'>
                     <button onClick={()=>{
                         let newLink = prompt("new image")
-                        console.log(newLink)
-                        axios.put('/api/events/'+ this.state.eventSlides[i].title, {image: newLink})
+                        // console.log(newLink)
+                        axios.put('/api/events/'+ eventSlides[i].title, {image: newLink})
                             .then(response =>{
                             this.updateEvent(response.data);
                         })
                     }}>Edit</button>
                     <button onClick={()=>{
                         // console.log(this.state.eventSlides[i])
-                        axios.delete('/api/events/'+ this.state.eventSlides[i].title).then(response =>{
+                        axios.delete('/api/events/'+ eventSlides[i].title).then(response =>{
                             this.updateEvent(response.data);
                         });
                         if(i >0){
@@ -79,7 +79,7 @@ class Events extends Component {
                     <button>Add</button>
                 </div>
                 <button onClick={()=>{
-                    if(i < this.state.eventSlides.length -1){
+                    if(i < eventSlides.length -1){
                         this.setState({index: i +1})}}}>
                 <strong>Next<i className="next"></i></strong></button>
             </section>
@@ -87,7 +87,7 @@ class Events extends Component {
             {this.state.view === "Events" ? (
                 <Events />
                 ) : (
-                <Add changeView={this.changeView} />
+                <Add changeView={this.changeView} updateEvent={this.updateEvent} />
             )}
             </section>
             
