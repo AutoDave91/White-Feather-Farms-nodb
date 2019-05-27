@@ -1,6 +1,6 @@
 const animals = [
     {
-        image: "{require(./Pics/miniDonkey.jpg)}",
+        image: "./Pics/miniDonkey.jpg",
         location: 'Pasture',
         species: 'Miniature Donkey',
         breed: '',
@@ -18,7 +18,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "{require(./Pics/fullDonkey.jpg)}",
+        image: "./Pics/fullDonkey.jpg",
         location: 'Pasture',
         species: 'Donkey',
         breed: '',
@@ -27,7 +27,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "{require(./Pics/duck2.jpg)}",
+        image: "./Pics/duck2.jpg",
         location: 'yard',
         species: 'Duck',
         breed: 'Khaki Campbell',
@@ -36,7 +36,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "{require(./Pics/miniPig.jpg)}",
+        image: "./Pics/miniPig.jpg",
         location: 'Yard',
         species: 'Pig',
         breed: 'American Miniature',
@@ -45,7 +45,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "{require(./Pics/PotPigs.jpg)}",
+        image: "./Pics/PotPigs.jpg",
         location: 'Yard',
         species: 'Pig',
         breed: 'Pot-bellied',
@@ -54,16 +54,16 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "{require(./Pics/goats2.jpg)}",
+        image: "./Pics/goats2.jpg",
         location: 'Yard',
         species: 'Goat',
         breed: 'Dwarf Nigerian',
         age_range: '1-2y',
-        names: 'Toby, Penelope, Daphne, Oreo, Thumper, ans Caesar',
+        names: 'Toby, Penelope, Daphne, Oreo, Thumper, and Caesar',
         fun: 'c-mon man!!'
     },
     {
-        image: "{require(./Pics/blackChicken.jpg)}",
+        image: "./Pics/blackChicken.jpg",
         location: 'Yard',
         species: 'Chicken',
         breed: 'Black Australorp',
@@ -72,7 +72,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "{require(./Pics/barChicken.jpg)}",
+        image: "./Pics/barChicken.jpg",
         location: 'yard',
         species: 'Chicken',
         breed: 'Barred Rock',
@@ -81,7 +81,7 @@ const animals = [
         fun: 'c-mon man!!'
     },
     {
-        image: "{require(./Pics/whiteChicken.jpg)}",
+        image: "./Pics/whiteChicken.jpg",
         location: 'Yard',
         species: 'Chicken',
         breed: 'Pearl White Leghorn',

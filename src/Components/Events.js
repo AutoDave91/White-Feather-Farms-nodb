@@ -46,7 +46,7 @@ class Events extends Component {
             </header>
             <section className='slides'>
                 {eventSlides.map((eventSlides, index)=>(
-                    index === this.state.index ? <EventSlides key={index} eventSlides={eventSlides} updateEvent={this.updateEvent} /> : null
+                    index === this.state.index ? <EventSlides key={index} eventSlides={eventSlides} updateEvent={this.updateEvent} index={this.state.index}/> : null
                     ))}
                     <button onClick={()=> {if(this.state.index >0){
                     this.setState({index: this.state.index -1})

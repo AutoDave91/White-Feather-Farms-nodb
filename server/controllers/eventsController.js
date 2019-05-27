@@ -1,13 +1,18 @@
 const eventSlides = [
     {
-        image: 'https://live.staticflickr.com/3120/2714938134_1166d0a16d_b.jpg',
-        title: 'pic1',
-        details: ''
+        image: './Pics/officeSocials.jpg',
+        title: 'Office Social',
+        details: 'Invite your office out to the farm.'
     },
     {
-        image: 'https://cdn.pixabay.com/photo/2017/08/31/20/01/farm-2702094_960_720.jpg',
-        title: 'pic2',
-        details: ''
+        image: './Pics/shooting.jpg',
+        title: 'Shooting',
+        details: 'Come on out to our shooting range (supervised)'
+    },
+    {
+        image: './Pics/wedding.png',
+        title: 'Weddings',
+        details: 'Have your small rustic wedding with us!'
     }
 ]
 

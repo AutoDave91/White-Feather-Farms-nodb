@@ -7,20 +7,6 @@
     width: 100vw;
     padding-top: 2vh;
 }
-.animal{
-    background: whitesmoke; 
-    display: flex;
-    flex-wrap: wrap;
-    height: 30vh;
-    width: 30vw;
-    margin-right: 5vw;
-    margin-bottom: 5vh;
-}
-.animals{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 header{
     display: flex;
     flex-direction: column;
@@ -28,8 +14,27 @@ header{
     padding-bottom: 2vh;
     color: white;
 }
+.animals{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.animal{
+    background: whitesmoke; 
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    height: 30vh;
+    width: 35vw;
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+}
 .animal-buttons1, .animal-buttons2{
     display: flex;
     justify-content: space-between;
     padding-bottom: 2vh;
+}
+.animalImage{
+    width: 18vw;
+    height: 18vh;
 }

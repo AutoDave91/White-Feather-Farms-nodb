@@ -8,7 +8,7 @@ const family = [
         children: ['David W Newman',', ', 'Megan Beattie']
     },
     {
-        image: '',
+        image: './Pics/christinaN.jpg',
         name: 'Christina Newman',
         job: 'Office Manager/HR',
         fav_animal: 'Penny the pig',
@@ -16,7 +16,7 @@ const family = [
         children: ['David W Newman',', ', 'Megan Beattie']
     },
     {
-        image: "../pics/aprilDavidRylie.jpg",
+        image: "./Pics/aprilDavidRylie.jpg",
         name: 'David W Newman',
         job: '',
         fav_animal: 'the pigs',
@@ -24,7 +24,7 @@ const family = [
         children: ['Rylie Newman']
     },
     {
-        image: "{require('../pics/aprilDavidRylie.jpg')}",
+        image: "./Pics/aprilDavidRylie.jpg",
         name: 'April Newman',
         job: 'NICU/PICU Respiratory Therapist',
         fav_animal: 'the goats',
@@ -32,7 +32,7 @@ const family = [
         children: ['Rylie Newman']
     },
     {
-        image: '',
+        image: './Pics/beattieClan.jpg',
         name: 'Alex Beattie',
         job: ['Fire Fighter', ', ', 'USAF reservist'],
         fav_animal: 'the cows',
