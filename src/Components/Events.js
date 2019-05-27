@@ -48,13 +48,31 @@ class Events extends Component {
                 {eventSlides.map((eventSlides, index)=>(
                     index === this.state.index ? <EventSlides key={index} eventSlides={eventSlides} updateEvent={this.updateEvent} index={this.state.index}/> : null
                     ))}
+            </section>
+            <section className='navButtons'>
                     <button onClick={()=> {if(this.state.index >0){
                     this.setState({index: this.state.index -1})
                 }}}><strong><i className="prev"></i>Previous</strong></button>
-                <button className={this.state.view === 'add' ? 'current' : ''} onClick={()=> this.setState({view: 'add'})}>Add</button>
+                <div className='addEditDelete'>
+                    <button onClick={()=>{
+                        axios.put('/api/events/'+ this.state.eventSlides.title).then(response =>{
+                            this.updateEvent(response.data);
+                        })
+                    }}>Edit</button>
+                    <button onClick={()=>{
+                        // console.log(this.state.eventSlides[this.state.index])
+                        axios.delete('/api/events/'+ this.state.eventSlides[this.state.index].title).then(response =>{
+                            this.updateEvent(response.data);
+                        });
+                        // if(this.state.index >0){
+                        //     this.setState({index: this.state.index -1})
+                        // };
+                    }}>Delete</button>
+                    <button>Add</button>
+                </div>
                 <button onClick={()=>{
                     if(this.state.index < this.state.eventSlides.length -1){
-                    this.setState({index: this.state.index +1})}}}>
+                        this.setState({index: this.state.index +1})}}}>
                 <strong>Next<i className="next"></i></strong></button>
             </section>
             {this.state.view === "Events" ? (
@@ -62,11 +80,7 @@ class Events extends Component {
                 ) : (
                 <Add changeView={this.changeView} />
             )}
-            <section className='Social'>
-                <button>Facebook</button>
-                <button>Email</button>
-                <button>Instagram</button>
-            </section>
+            
         </main>
         );
     }

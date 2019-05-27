@@ -72,8 +72,8 @@ class Animals extends Component {
     // }
 
     render(){
-        console.log(this.state.animals)
-        console.log(this.state.index)
+        // console.log(this.state.animals)
+        // console.log(this.state.index)
         const {animals} = this.state;
         return (
             <main className="animalsContainer">

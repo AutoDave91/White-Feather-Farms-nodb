@@ -45,7 +45,7 @@ class Family extends Component {
                     index === this.state.index+1 ? <FamilyProfile key={index} family={family} updateFamily={this.updateFamily} /> : null
                     ))}
             </section>
-            <section>
+            <section className='navButtons'>
                 <button onClick={()=> {if(this.state.index >=2){
                         this.setState({index: this.state.index -2})
                     }}}><strong><i className="prev"></i>Previous</strong></button>

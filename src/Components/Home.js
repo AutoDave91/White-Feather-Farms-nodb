@@ -31,7 +31,8 @@ class Home extends Component {
     }
 
     render(){
-        const {picSlides} = this.state
+        const {picSlides} = this.state;
+        let i = this.state.index;
         return (
             <main className="homeContainer" id='home'>
             <header>
@@ -39,9 +40,11 @@ class Home extends Component {
             </header>
             <section className='slides'>
                 {picSlides.map((picSlides, index)=>(
-                    index === this.state.index ? <HomeSlides key={index} picSlides={picSlides} updateHome={this.updateHome} /> : null
+                    index === i ? <HomeSlides key={index} picSlides={picSlides} updateHome={this.updateHome} /> : null
                     ))}
-                    <button onClick={()=> {if(this.state.index >0){
+            </section>
+            <section className='navButtons'>
+                <button onClick={()=> {if(this.state.index >0){
                     this.setState({index: this.state.index -1})
                 }}}><strong><i className="prev"></i>Previous</strong></button>
                 <button onClick={()=>{if(this.state.index < this.state.picSlides.length -1){

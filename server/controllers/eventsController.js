@@ -20,6 +20,7 @@ const getEvents = (req, res)=>{
     res.json(eventSlides);
 }
 const deleteEvent = (req, res)=>{
+    // console.log(req.params)
     const index = eventSlides.findIndex(event =>event.title ===req.params.title);
     eventSlides.splice(index, 1);
     res.json(eventSlides);
