@@ -31,13 +31,12 @@ class Add extends Component {
               title: this.state.title,
               details: this.state.details
             })
-            // .get('/api/events')
             .then(response => {
               this.props.changeView("events");
             })
             .catch(error => {
               console.log(error);
-            });
+            })
         }}
       >
         <input name="image" onChange={this.handleChange} placeholder="Image" />

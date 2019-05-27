@@ -75,6 +75,7 @@ class Animals extends Component {
         // console.log(this.state.animals)
         // console.log(this.state.index)
         const {animals} = this.state;
+        let i = this.state.index;
         return (
             <main className="animalsContainer">
                 <header>
@@ -90,28 +91,28 @@ class Animals extends Component {
                 </section>
                 <section className='animals'>
                     {animals.map((animal, index)=>(
-                        index === this.state.index ? <AnimalProfile key={index} animal={animal} updateAnimals={this.updateAnimals} /> : null
+                        index === i ? <AnimalProfile key={index} animal={animal} updateAnimals={this.updateAnimals} /> : null
                         ))}
                     {animals.map((animal, index)=>(
-                        index === this.state.index+1 ? <AnimalProfile key={index} animal={animal} updateAnimals={this.updateAnimals} /> : null
+                        index === i+1 ? <AnimalProfile key={index} animal={animal} updateAnimals={this.updateAnimals} /> : null
                         ))}
                     {animals.map((animal, index)=>(
-                        index === this.state.index+2 ? <AnimalProfile key={index} animal={animal} updateAnimals={this.updateAnimals} /> : null
+                        index === i+2 ? <AnimalProfile key={index} animal={animal} updateAnimals={this.updateAnimals} /> : null
                         ))}
                     {animals.map((animal, index)=>(
-                        index === this.state.index+3 ? <AnimalProfile key={index} animal={animal} updateAnimals={this.updateAnimals} /> : null
+                        index === i+3 ? <AnimalProfile key={index} animal={animal} updateAnimals={this.updateAnimals} /> : null
                         ))}
                     </section>
                     <section className='animal-buttons2'>
-                        <button onClick={()=> {if(this.state.index >=4){
-                            this.setState({index: this.state.index -4})
+                        <button onClick={()=> {if(i >=4){
+                            this.setState({index: i -4})
                         }}}><strong><i className="prev"></i>Previous</strong></button>
                         <section className='search'>
                             <input type='field' placeholder='search species' onChange={(e) => this.handleChange(e.target.value)} />
                             <button onClick={()=> {this.searchAnimals(this.state.userSearch)}}>Search</button>
                         </section>
-                        <button onClick={()=>{ if(this.state.index < animals.length-4){
-                            this.setState({index: this.state.index +4})}}}>
+                        <button onClick={()=>{ if(i < animals.length-4){
+                            this.setState({index: i +4})}}}>
                         <strong>Next<i className="next"></i></strong></button>
                     </section>
             </main>

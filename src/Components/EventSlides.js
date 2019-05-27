@@ -6,12 +6,13 @@ function EventSlides(props) {
   return (
     <main className="events">
         <section>
-            <span>{props.eventSlides.image.charAt(0) === '.'
+            <span className='eventSlide'>{props.eventSlides.image.charAt(0) === '.'
 
             ? <img className='slides' src={require(`${props.eventSlides.image}`)} alt={props.eventSlides.title} />
             : <img className='slides' src={props.eventSlides.image} alt={props.eventSlides.title} />}
             </span>
         </section>
+        
         {/* <section className='editDelete'>
             <button onClick={()=>{
                 axios.put('/api/events/'+ props.eventSlides.title).then(response =>{

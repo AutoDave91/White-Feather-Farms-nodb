@@ -12,7 +12,8 @@ class Events extends Component {
             index:0,
             loading: false,
             error: '',
-            view: 'events'
+            view: 'events',
+            userInput: ''
         }
         this.changeView = this.changeView.bind(this)
         this.updateEvent = this.updateEvent.bind(this)
@@ -35,9 +36,13 @@ class Events extends Component {
     updateEvent(newEvent){
         this.setState({eventSlides: newEvent});
     }
+    handleChange(e) {
+        this.setState({ [e.target.name]: e.target.value });
+      }
 
     render(){
-        const {eventSlides} = this.state
+        const {eventSlides} = this.state;
+        let i = this.state.index;
         return (
         <main className="eventsContainer">
             <header className='Header'>
@@ -46,40 +51,44 @@ class Events extends Component {
             </header>
             <section className='slides'>
                 {eventSlides.map((eventSlides, index)=>(
-                    index === this.state.index ? <EventSlides key={index} eventSlides={eventSlides} updateEvent={this.updateEvent} index={this.state.index}/> : null
+                    index === i ? <EventSlides key={index} eventSlides={eventSlides} updateEvent={this.updateEvent} index={i}/> : null
                     ))}
             </section>
             <section className='navButtons'>
-                    <button onClick={()=> {if(this.state.index >0){
-                    this.setState({index: this.state.index -1})
+                    <button onClick={()=> {if(i >0){
+                    this.setState({index: i -1})
                 }}}><strong><i className="prev"></i>Previous</strong></button>
                 <div className='addEditDelete'>
                     <button onClick={()=>{
-                        axios.put('/api/events/'+ this.state.eventSlides.title).then(response =>{
+                        let newLink = prompt("new image")
+                        axios.put('/api/events/'+ this.state.eventSlides[i].image)
+                            .then(response =>{
                             this.updateEvent(response.data);
                         })
                     }}>Edit</button>
                     <button onClick={()=>{
-                        // console.log(this.state.eventSlides[this.state.index])
-                        axios.delete('/api/events/'+ this.state.eventSlides[this.state.index].title).then(response =>{
+                        // console.log(this.state.eventSlides[i])
+                        axios.delete('/api/events/'+ this.state.eventSlides[i].title).then(response =>{
                             this.updateEvent(response.data);
                         });
-                        // if(this.state.index >0){
-                        //     this.setState({index: this.state.index -1})
-                        // };
+                        if(i >0){
+                            this.setState({index: i -1})
+                        };
                     }}>Delete</button>
                     <button>Add</button>
                 </div>
                 <button onClick={()=>{
-                    if(this.state.index < this.state.eventSlides.length -1){
-                        this.setState({index: this.state.index +1})}}}>
+                    if(i < this.state.eventSlides.length -1){
+                        this.setState({index: i +1})}}}>
                 <strong>Next<i className="next"></i></strong></button>
             </section>
+            <section className='adding'>
             {this.state.view === "Events" ? (
                 <Events />
                 ) : (
                 <Add changeView={this.changeView} />
             )}
+            </section>
             
         </main>
         );
