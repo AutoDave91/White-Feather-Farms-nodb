@@ -61,7 +61,8 @@ class Events extends Component {
                 <div className='addEditDelete'>
                     <button onClick={()=>{
                         let newLink = prompt("new image")
-                        axios.put('/api/events/'+ this.state.eventSlides[i].image)
+                        console.log(newLink)
+                        axios.put('/api/events/'+ this.state.eventSlides[i].title, {image: newLink})
                             .then(response =>{
                             this.updateEvent(response.data);
                         })

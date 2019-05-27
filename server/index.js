@@ -20,7 +20,7 @@ app.post('/api/events', eventsController.addEvent);
 
 // app.put('/api/animals/:')
 // app.put('/api/family/:')
-app.put('/api/events/:', eventsController.editEvent)
+app.put('/api/events/:title', eventsController.editEvent)
 
 // app.delete('/api/animals')
 app.delete('/api/events/:title', eventsController.deleteEvent)
